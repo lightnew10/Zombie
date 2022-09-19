@@ -1,0 +1,10 @@
+name: Zombie
+description: More in github https://github.com/lightnew10/Zombie
+website: https://github.com/lightnew10/Zombie
+author: lightnew
+main: fr.lightnew.ZombieMain
+version: -1.0
+api-version: 1.16
+commands:
+  build:
+  createwall:
