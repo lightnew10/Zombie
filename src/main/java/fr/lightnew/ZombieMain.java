@@ -12,13 +12,12 @@ import java.io.File;
 public class ZombieMain extends JavaPlugin {
 
     public static ZombieMain instance;
-    public static String PREFIX = ChatColor.GRAY+ "[" +ChatColor.YELLOW + "Zombie" + ChatColor.GRAY + "]";
+    public static String PREFIX = ChatColor.GRAY+ "[" +ChatColor.YELLOW + "Zombie-Back-4-Bloods" + ChatColor.GRAY + "]";
 
     @Override
     public void onEnable() {
         instance = this;
         log(PREFIX + ChatColor.GREEN + " is Enable");
-        saveDefaultConfig();
 
         //TODO LISTENERS
         PluginManager plugin = Bukkit.getPluginManager();

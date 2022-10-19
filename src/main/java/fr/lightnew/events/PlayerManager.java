@@ -1,6 +1,7 @@
 package fr.lightnew.events;
 
 import fr.lightnew.commands.Build;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,6 +16,9 @@ public class PlayerManager implements Listener {
     @EventHandler
     public void join(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        event.setJoinMessage("");
+        player.sendMessage(ChatColor.YELLOW + "Vous venez de rejoindre le serveur ! " +
+                "\nPour pouvoir commencer à jouer veuillez choisir entre les 2 propositions devant vous.");
     }
 
     @EventHandler
