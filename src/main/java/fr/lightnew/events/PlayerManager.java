@@ -1,6 +1,8 @@
 package fr.lightnew.events;
 
 import fr.lightnew.commands.Build;
+import fr.lightnew.tools.HeadClick;
+import fr.lightnew.tools.ItemBuilder;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,8 +12,11 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.*;
+import org.bukkit.inventory.ItemStack;
 
 public class PlayerManager implements Listener {
+
+    public static ItemStack skull_armorstand = ItemBuilder.skull(1, "lightnew", "lightnew");
 
     @EventHandler
     public void join(PlayerJoinEvent event) {
@@ -19,6 +24,7 @@ public class PlayerManager implements Listener {
         event.setJoinMessage("");
         player.sendMessage(ChatColor.YELLOW + "Vous venez de rejoindre le serveur ! " +
                 "\nPour pouvoir commencer à jouer veuillez choisir entre les 2 propositions devant vous.");
+        HeadClick.createHeadClick(player, ChatColor.YELLOW + "Bienvenue " + ChatColor.GOLD + player.getName() + ChatColor.YELLOW + " sur le serveur !", skull_armorstand);
     }
 
     @EventHandler

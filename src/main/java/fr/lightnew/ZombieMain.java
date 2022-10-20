@@ -1,6 +1,7 @@
 package fr.lightnew;
 
 import fr.lightnew.commands.Build;
+import fr.lightnew.commands.CreateHeadClick;
 import fr.lightnew.events.PlayerManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -25,6 +26,7 @@ public class ZombieMain extends JavaPlugin {
 
         //TODO COMMANDS
         getCommand("build").setExecutor(new Build());
+        getCommand("headclick").setExecutor(new CreateHeadClick());
     }
 
     @Override
